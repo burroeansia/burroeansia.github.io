@@ -1,0 +1,52 @@
+<article id="post-{{ .File.UniqueID }}" class="{{ .Params.post_class | default `post` }}">
+
+{{/* wp2static unmapped: if ( have_posts() ) : */}}	
+
+	<div class="post-media">
+		{{/* wp2static unmapped: get_template_part( 'templates/post/content', get_post_format() ); */}}
+	</div>
+
+	<header class="post-header">
+
+		{{/* wp2static unmapped: $category_list = get_the_category_list( ',&nbsp;&nbsp;' ); */}}
+
+		{{/* wp2static unmapped: if ( get_the_title() ) : */}}
+		<h1 class="post-title">{{ .Title }}</h1>
+		{{/* wp2static dropped orphan: end */}}
+
+		<div class="border-divider"></div>
+		
+		{{/* wp2static unmapped: if ( bard_options( 'single_page_show_date' ) || bard_options( 'single_page_show_comments' ) ) : */}}
+		<div class="post-meta clear-fix">
+			{{/* wp2static unmapped: if ( bard_options( 'single_page_show_date' ) === true ) : */}}
+			<span class="post-date">{{/* wp2static unmapped: the_time( get_option( 'date_format' ) ); */}}</span>
+			{{/* wp2static dropped orphan: end */}}
+
+			<span class="meta-sep">/</span>
+
+			{{/* wp2static unmapped: if ( bard_options( 'single_page_show_comments' ) === true && comments_open() ) */}}
+		</div>
+		{{/* wp2static dropped orphan: end */}}
+		
+	</header>
+
+	<div class="post-content">
+
+		{{/* wp2static unmapped: // The Post Content */}}
+	</div>
+
+	<footer class="post-footer">
+
+		{{/* wp2static unmapped: // The Tags */}}
+
+		{{/* wp2static unmapped: if ( bard_options( 'single_page_show_author' ) === true ) : */}}
+		<span class="post-author">By&nbsp;{{/* wp2static unmapped: the_author_posts_link(); */}}</span>
+		{{/* wp2static dropped orphan: end */}}
+		
+		{{/* wp2static unmapped: bard_post_sharing(); */}}
+
+	</footer>
+
+{{/* wp2static unmapped: endwhile; // Loop End */}}
+
+</article>

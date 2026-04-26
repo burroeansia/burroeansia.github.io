@@ -1,0 +1,30 @@
+<div class="sidebar-right-wrap">
+    <aside class="sidebar-right">
+
+        <div class="bard-widget widget_categories">
+            <div class="widget-title"><h4>Categorie</h4></div>
+            <ul>
+                {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                    <li class="cat-item"><a href="{{ (printf "categories/%s" $name) | relURL }}">{{ $name | humanize | title }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+
+        {{ with .Site.Params.instagramHandle }}
+        <div class="bard-widget null-instagram-feed">
+            <div class="widget-title"><h4>Instagram</h4></div>
+            <p><a href="https://instagram.com/{{ . }}/" target="_blank" rel="noopener noreferrer me">Seguimi @{{ . }}</a></p>
+        </div>
+        {{ end }}
+
+        <div class="bard-widget widget_archive">
+            <div class="widget-title"><h4>Archivi</h4></div>
+            <ul>
+                {{ range (.Site.RegularPages.GroupByDate "January 2006") }}
+                    <li><a href="#">{{ .Key }}</a>&nbsp;({{ len .Pages }})</li>
+                {{ end }}
+            </ul>
+        </div>
+
+    </aside>
+</div>

@@ -1,0 +1,65 @@
+{{/* wp2static unmapped: // Check for WooCommerce */}}
+
+<!-- Wrap Slider Area -->
+<div class="featured-slider-area{{/* wp2static unmapped: echo bard_options( 'general_slider_width' ) === 'boxed' ? ' boxed-wrapper': ''; */}}">
+
+<!-- Featured Slider -->
+<div id="featured-slider" class="{{/* wp2static unmapped: echo bard_options( 'general_slider_width' ) === 'boxed' ? 'boxed-wrapper': ''; */}}" data-slider-columns="{{/* wp2static unmapped: echo esc_attr( $slider_columns ); */}}" data-slick="{{/* wp2static unmapped: echo esc_attr( $slider_data ); */}}">
+	
+	{{/* wp2static unmapped: // Query Args */}}
+
+	<div class="slider-item">
+
+		{{/* wp2static unmapped: if ( $slider_columns === 1 ) : */}}
+			<div class="slider-item-bg" style="background-image:url({{/* wp2static unmapped: echo the_post_thumbnail_url(); */}});"></div>
+		{{/* wp2static dropped orphan: else */}}
+			<img src="{{/* wp2static unmapped: the_post_thumbnail_url('bard-slider-thumbnail'); */}}" alt="">
+		{{/* wp2static dropped orphan: end */}}
+
+		<div class="cv-container image-overlay">
+			<div class="cv-outer">
+				<div class="cv-inner">
+					<div class="slider-info">
+
+						{{/* wp2static unmapped: if ( bard_options( 'featured_slider_more' ) === false && bard_options( 'featured_slider_title' ) === false ) */}}
+
+						{{/* wp2static unmapped: $category_list = get_the_category_list( ', ' ); */}}		
+
+						{{/* wp2static unmapped: if ( bard_options( 'featured_slider_categories' ) === true && $category_list ) : */}}
+						<div class="slider-categories">
+							{{/* wp2static unmapped: echo '' . $category_list; */}}
+						</div> 
+						{{/* wp2static dropped orphan: end */}}
+
+						{{/* wp2static unmapped: if( bard_options( 'featured_slider_title' ) === true ) : */}}
+						<h2 class="slider-title"> 
+							<a href="{{ .Permalink }}">{{ .Title }}</a>								
+						</h2>
+						{{/* wp2static dropped orphan: end */}}
+
+						{{/* wp2static unmapped: if ( bard_options( 'featured_slider_excerpt' ) > 0 ): */}}							
+						<div class="slider-content">{{/* wp2static unmapped: bard_excerpt( bard_options( 'featured_slider_excerpt' ) ); */}}</div>
+						{{/* wp2static dropped orphan: end */}}
+
+						{{/* wp2static unmapped: if ( bard_options( 'featured_slider_more' ) === true ) : */}}
+						<div class="slider-read-more">
+							<a href="get_{{ .Permalink }}">read more</a>
+						</div>
+						{{/* wp2static dropped orphan: end */}}
+
+						{{/* wp2static unmapped: if( bard_options( 'featured_slider_date' ) === true ) : */}}
+						<div class="slider-date">{{/* wp2static unmapped: the_time( get_option('date_format') ); */}}</div>
+						{{/* wp2static dropped orphan: end */}}
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	{{/* wp2static unmapped: endwhile; // Loop end */}}
+
+</div><!-- #featured-slider -->
+
+</div><!-- .featured-slider-area -->

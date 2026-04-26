@@ -1,0 +1,12 @@
+{{ partial `header.html` . }}
+
+	<div class="page-404">
+	
+		<h2>Page not found!</h2>
+
+		<p>{{/* wp2static unmapped: esc_html_e( 'It seems we can\'t find what you\'re looking for. Perhaps searching can help or go back to ', 'bard-pro' ); */}}
+		<a href="{{ `/` | absURL }}">Homepage</a></p>
+
+	</div>
+
+{{ partial `footer.html` . }}

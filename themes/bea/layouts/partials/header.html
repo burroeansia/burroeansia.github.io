@@ -1,0 +1,20 @@
+<div class="entry-header">
+    <div class="cvr-container">
+        <div class="cvr-outer">
+            <div class="cvr-inner">
+                <div class="header-logo">
+                    <a href="{{ .Site.BaseURL | relURL }}" title="{{ .Site.Title }}" class="logo-text">
+                        {{ with .Site.Params.logo }}
+                            <img src="{{ . | relURL }}" alt="{{ $.Site.Title }}" class="logo-img">
+                        {{ else }}
+                            <span class="logo-word" title="{{ .Site.Title }}"><img src="/images/logo_burro_web_orizz.png"></span>
+                        {{ end }}
+                    </a>
+                    {{ with .Site.Params.tagline }}
+                        <p class="site-description">{{ . }}</p>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div class="main-content clear-fix boxed-wrapper" data-layout="col1-rsidebar">
+    <div class="main-container">
+
+        <header class="archive-header">
+            <h1 class="page-title">{{ .Title }}</h1>
+            <div class="border-divider"></div>
+            {{ with .Description }}<p class="archive-description">{{ . }}</p>{{ end }}
+        </header>
+
+        <ul class="blog-grid">
+            {{ $paginator := .Paginate .Pages 8 }}
+            {{ range $paginator.Pages }}
+                {{ partial "post-card.html" . }}
+            {{ end }}
+        </ul>
+
+        {{ if or $paginator.HasPrev $paginator.HasNext }}
+        <nav class="blog-pagination clear-fix default">
+            {{ if $paginator.HasPrev }}
+                <div class="previous-page"><a href="{{ $paginator.Prev.URL }}"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;Newer</a></div>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+                <div class="next-page"><a href="{{ $paginator.Next.URL }}">Older&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a></div>
+            {{ end }}
+        </nav>
+        {{ end }}
+    </div>
+
+    {{ partial "sidebar.html" . }}
+</div>
+{{ end }}

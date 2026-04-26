@@ -1,0 +1,33 @@
+{{/* wp2static unmapped: // Get Previous and Next Posts */}}
+
+<div class="single-navigation">
+	<!-- Previous Post -->
+	{{/* wp2static unmapped: if ( ! empty( $prev_post ) ) : */}}
+	<div class="previous-post">
+		<a href="{{/* wp2static unmapped: echo esc_url( get_permalink($prev_post->ID) ); */}}" title="{{/* wp2static unmapped: echo esc_attr($prev_post->post_title); */}}">
+		get_{{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Title }}">{{ end }}
+		</a>
+		<div>
+			<span><i class="fas fa-long-arrow-alt-left"></i>&nbsp;Previous</span>
+			<a href="{{/* wp2static unmapped: echo esc_url( get_permalink( $prev_post->ID ) ); */}}" title="{{/* wp2static unmapped: echo esc_attr($prev_post->post_title); */}}">
+				<h5>{{/* wp2static unmapped: echo esc_attr( $prev_post->post_title ); */}}</h5>
+			</a>
+		</div>
+	</div>
+	{{/* wp2static dropped orphan: end */}}
+
+	<!-- Next Post -->
+	{{/* wp2static unmapped: if ( ! empty( $next_post ) ) : */}}
+	<div class="next-post">
+		<a href="{{/* wp2static unmapped: echo esc_url( get_permalink($next_post->ID) ); */}}" title="{{/* wp2static unmapped: echo esc_attr($next_post->post_title); */}}">
+		get_{{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Title }}">{{ end }}
+		</a>
+		<div>
+			<span>Newer&nbsp;<i class="fas fa-long-arrow-alt-right"></i></span>
+			<a href="{{/* wp2static unmapped: echo esc_url( get_permalink( $next_post->ID ) ); */}}" title="{{/* wp2static unmapped: echo esc_attr($next_post->post_title); */}}">
+				<h5>{{/* wp2static unmapped: echo esc_attr( $next_post->post_title ); */}}</h5>		
+			</a>
+		</div>
+	</div>
+	{{/* wp2static dropped orphan: end */}}
+</div>

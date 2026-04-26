@@ -1,0 +1,48 @@
+		</div><!-- .page-content -->
+
+		<!-- Page Footer -->
+		<footer id="page-footer" class="{{/* wp2static unmapped: echo bard_options( 'general_footer_width' ) === 'boxed' ? 'boxed-wrapper ': ''; */}}clear-fix">
+
+			{{/* wp2static unmapped: // Instagram Widget */}}
+
+			{{/* wp2static unmapped: if ( bard_options( 'page_footer_logo' ) != '' || bard_options( 'page_footer_copyright' ) != '' || bard_options('page_footer_show_scrolltop') === true ) : */}}
+			<div class="footer-copyright">
+
+				<div class="page-footer-inner {{/* wp2static unmapped: echo bard_options( 'general_footer_width' ) === 'contained' ? 'boxed-wrapper': ''; */}}">
+
+					<!-- Footer Logo -->
+					{{/* wp2static unmapped: if ( bard_options( 'page_footer_logo' ) != '' ) : */}}
+					<div class="footer-logo">
+						<a href="{{ `/` | absURL }}" title="{{ .Site.Title }}">
+							<img src="{{/* wp2static unmapped: echo esc_url( wp_get_attachment_url( bard_options( 'page_footer_logo' ) ) ); */}}" alt="{{ .Site.Title }}">
+						</a>
+					</div>
+					{{/* wp2static dropped orphan: end */}}
+					
+					<!-- Copyright -->
+					<div class="copyright-info">
+						{{/* wp2static unmapped: $copyright = bard_options( 'page_footer_copyright' ); */}}
+					</div>
+					
+					{{/* wp2static unmapped: wp_nav_menu( array( */}}
+					
+					{{/* wp2static unmapped: if ( bard_options('page_footer_show_scrolltop') === true ) : */}}
+					<span class="scrolltop">
+						<span class="icon-angle-up"></span>
+						<span>Back to top</span>
+					</span>
+					{{/* wp2static dropped orphan: end */}}
+
+				</div>
+
+			</div><!-- .boxed-wrapper -->
+			{{/* wp2static unmapped: endif */}}
+
+		</footer><!-- #page-footer -->
+
+	</div><!-- #page-wrap -->
+
+
+
+</body>
+</html>

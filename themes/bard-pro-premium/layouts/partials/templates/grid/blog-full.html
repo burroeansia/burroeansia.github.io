@@ -1,0 +1,65 @@
+{{/* wp2static unmapped: $full_width_post = ( is_home() && ! is_paged() && $wp_query->current_post == 0 && bard_full_width_post() ) ? 'yes' : 'no'; */}}
+
+<article id="post-{{ .File.UniqueID }}" {{/* wp2static unmapped: post_class( 'blog-post' ); */}} data-dropcaps="{{/* wp2static unmapped: echo $full_width_post; */}}">
+	
+	
+	<header class="post-header">
+	
+		{{/* wp2static unmapped: if ( bard_options( 'blog_page_show_categories' ) === true ) : */}}
+		<div class="post-categories">{{/* wp2static unmapped: the_category( ',&nbsp;&nbsp;' ); */}}</div>
+		{{/* wp2static dropped orphan: end */}}
+
+		{{/* wp2static unmapped: if ( get_the_title() ) : */}}
+		<h1 class="post-title">
+			<a href="{{ .Permalink }}">{{ .Title }}</a>
+		</h1>
+		{{/* wp2static dropped orphan: end */}}
+
+		<div class="border-divider"></div>
+
+		{{/* wp2static unmapped: if ( bard_options( 'single_page_show_date' ) === true || bard_options( 'single_page_show_comments' ) === true ): */}}
+		<div class="post-meta clear-fix">
+			{{/* wp2static unmapped: if ( bard_options( 'single_page_show_date' ) === true ) : */}}
+			<span class="post-date">{{/* wp2static unmapped: the_time( get_option( 'date_format' ) ); */}}</span>
+			{{/* wp2static dropped orphan: end */}}
+
+			<span class="meta-sep">/</span>
+
+			{{/* wp2static unmapped: if ( bard_options( 'single_page_show_comments' ) === true && comments_open() ) */}}
+		</div>	
+		{{/* wp2static dropped orphan: end */}}
+		
+	</header>
+
+	<div class="post-media">
+		<a href="{{ .Permalink }}"></a>
+		{{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Title }}">{{ end }}
+	</div>
+
+	{{/* wp2static unmapped: if ( bard_options( 'blog_page_post_description' ) !== 'none' ) : */}}
+	<div class="post-content">
+		{{/* wp2static unmapped: if ( bard_options( 'blog_page_post_description' ) === 'content' ) */}}
+	</div>
+	{{/* wp2static dropped orphan: end */}}
+
+	<div class="read-more">
+		<a href="get_{{ .Permalink }}">{{/* wp2static unmapped: echo esc_html( bard_options( 'blog_page_more_text' ) ); */}}</a>
+	</div>
+
+	<footer class="post-footer">
+
+		{{/* wp2static unmapped: if ( bard_options( 'blog_page_show_author' ) === true ) : */}}
+		<span class="post-author">
+			{{/* wp2static unmapped: echo '<a href="'. esc_url(get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) )) .'">'; */}}
+		</span>
+
+		{{/* wp2static unmapped: bard_post_sharing(); */}}
+		
+		{{/* wp2static dropped orphan: end */}}
+
+	</footer>
+
+	<!-- Related Posts -->
+	{{/* wp2static unmapped: if ( bard_options( 'blog_page_related_orderby' ) !== 'none' ) */}}
+
+</article>

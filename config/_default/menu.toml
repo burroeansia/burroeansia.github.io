@@ -1,0 +1,37 @@
+# WordPress menu: Primary (slug: primary)
+[[main]]
+  name = "Home"
+  url = "/"
+  identifier = "main-496"
+  weight = 10
+
+[[main]]
+  name = "Bologna Food"
+  url = "/bologna-food/"
+  identifier = "main-479"
+  weight = 20
+
+[[main]]
+  name = "Chi Siamo"
+  url = "/about/"
+  identifier = "main-312"
+  weight = 30
+
+[[main]]
+  name = "Contattaci"
+  url = "/contact/"
+  identifier = "main-313"
+  weight = 40
+
+# WordPress menu: Social Media (slug: social-media)
+[[top]]
+  name = "Facebook"
+  url = "https://www.facebook.com/butterandanxiety/"
+  identifier = "top-308"
+  weight = 10
+
+[[top]]
+  name = "Instagram"
+  url = "https://www.instagram.com/butterandanxiety/"
+  identifier = "top-309"
+  weight = 20

@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+{{ partial "slider.html" . }}
+
+<div class="main-content clear-fix boxed-wrapper" data-layout="col1-rsidebar">
+    <div class="main-container">
+        <ul class="blog-grid">
+            {{ $paginator := .Paginate (where .Site.RegularPages "Section" "posts") 8 }}
+            {{ range $paginator.Pages }}
+                {{ partial "post-card.html" . }}
+            {{ end }}
+        </ul>
+
+        {{ if or $paginator.HasPrev $paginator.HasNext }}
+        <nav class="blog-pagination clear-fix default">
+            {{ if $paginator.HasPrev }}
+                <div class="previous-page"><a href="{{ $paginator.Prev.URL }}"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;Newer Posts</a></div>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+                <div class="next-page"><a href="{{ $paginator.Next.URL }}">Older Posts&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a></div>
+            {{ end }}
+        </nav>
+        {{ end }}
+    </div>
+
+    {{ partial "sidebar.html" . }}
+</div>
+
+{{ end }}

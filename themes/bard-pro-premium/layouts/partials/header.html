@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	{{ hugo.Generator }}
+</head>
+
+<body class="{{ .Params.body_class | default `page` }}">
+
+	<!-- Preloader -->
+	{{ partial `templates/header/preloader.html` . }}
+
+	<!-- Page Wrapper -->
+	<div id="page-wrap">
+
+		<!-- Boxed Wrapper -->
+		<div id="page-header" {{/* wp2static unmapped: echo bard_options( 'general_header_width' ) === 'boxed' ? 'class="boxed-wrapper"': ''; */}}>
+
+		{{/* wp2static unmapped: // Instagram Widget */}}
+
+		</div><!-- .boxed-wrapper -->
+
+		<!-- Page Content -->
+		<div class="page-content">
+
+			{{ partial `templates/sidebars/sidebar-alt.html` . }}; // Sidebar Alt

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Category on Burro &amp; Ansia</title>
+    <link>//localhost:9011/category/</link>
+    <description>Recent content in Category on Burro &amp; Ansia</description>
+    <generator>Hugo</generator>
+    <language>it-IT</language>
+    <atom:link href="//localhost:9011/category/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

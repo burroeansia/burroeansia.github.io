@@ -1,0 +1,19 @@
+{{/* wp2static unmapped: $images = get_field('select_gallery_images'); */}}
+			<div class="post-slide stacked-slide">
+				{{/* wp2static unmapped: echo wp_get_attachment_image( $image['ID'],'bard-full-thumbnail' ); */}}
+				{{/* wp2static unmapped: if ( $image['caption'] ): */}}
+				<span class="slide-caption">{{/* wp2static unmapped: echo $image['caption']; */}}</span>	
+				{{/* wp2static dropped orphan: end */}}
+			</div>
+	{{/* wp2static unmapped: endforeach; */}}
+
+	<div id="post-slider" class="post-slider">
+	{{/* wp2static unmapped: foreach ( $images as $image ) : */}}
+		<div class="post-slide">
+		{{/* wp2static unmapped: if ( strpos( bard_page_layout(), 'col1' ) === 0 || is_single() ) */}}
+		</div>
+	{{/* wp2static unmapped: endforeach; */}}
+	</div>
+
+{{/* wp2static dropped orphan: end */}}
+{{/* wp2static dropped orphan: end */}}

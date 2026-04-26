@@ -1,0 +1,63 @@
+<article id="post-{{ .File.UniqueID }}" {{/* wp2static unmapped: post_class('blog-post clear-fix'); */}}>
+	
+	<div class="post-media">
+		{{/* wp2static unmapped: get_template_part( 'templates/post/content', get_post_format() ); */}}
+	</div>
+
+	<div class="post-content-wrap">
+
+		<header class="post-header">
+
+	 		{{/* wp2static unmapped: $category_list = get_the_category_list( ',&nbsp;&nbsp;' ); */}}
+
+			{{/* wp2static unmapped: if ( get_the_title() ) : */}}
+			<h1 class="post-title">
+				<a href="{{ .Permalink }}">{{ .Title }}</a>
+			</h1>
+			{{/* wp2static dropped orphan: end */}}
+
+			{{/* wp2static unmapped: if ( bard_options( 'blog_page_show_date' ) || bard_options( 'blog_page_show_comments' ) || bard_options( 'blog_page_show_author' ) ) : */}}
+			<div class="post-meta clear-fix">
+
+				{{/* wp2static unmapped: if ( bard_options( 'blog_page_show_author' ) === true ) : */}}
+				<span>By</span>
+				<span class="post-author">{{/* wp2static unmapped: the_author_posts_link(); */}}</span>
+				{{/* wp2static dropped orphan: end */}}
+
+				{{/* wp2static unmapped: if ( bard_options( 'blog_page_show_date' ) === true ) : */}}			
+				<span class="meta-sep">/</span>
+				<span class="post-date">{{/* wp2static unmapped: the_time( get_option( 'date_format' ) ); */}}</span>
+				{{/* wp2static dropped orphan: end */}}
+
+				{{/* wp2static unmapped: if ( bard_options( 'blog_page_show_comments' ) === true && comments_open() ) : */}}
+				<span class="meta-sep">/</span>
+					{{/* wp2static unmapped: comments_popup_link( esc_html__( 'No Comments', 'bard-pro' ), esc_html__( '1 Comment', 'bard-pro' ), '% '. esc_html__( 'Comments', 'bard-pro' ), 'post-comments'); */}}
+				{{/* wp2static dropped orphan: end */}}
+				
+			</div>
+			{{/* wp2static dropped orphan: end */}}
+			
+		</header>
+
+		{{/* wp2static unmapped: if ( bard_options( 'blog_page_post_description' ) !== 'none' ) : */}}
+
+		<div class="post-content">
+			{{/* wp2static unmapped: if ( bard_options( 'blog_page_post_description' ) === 'content' ) */}}
+		</div>
+
+		{{/* wp2static dropped orphan: end */}}
+
+		{{/* wp2static unmapped: if ( bard_options( 'blog_page_show_read_more' ) === true ) : */}}
+		<div class="read-more">
+			<a href="get_{{ .Permalink }}">{{/* wp2static unmapped: echo esc_html( bard_options( 'blog_page_more_text' ) ); */}}</a>
+		</div>
+		{{/* wp2static dropped orphan: end */}}
+
+		{{/* wp2static unmapped: bard_post_sharing(); */}}
+
+	</div>
+
+</article>
+
+<!-- Related Posts -->
+{{/* wp2static unmapped: if ( bard_options( 'blog_page_related_orderby' ) !== 'none' ) */}}

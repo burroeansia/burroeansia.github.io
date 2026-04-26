@@ -1,0 +1,43 @@
+{{/* wp2static unmapped: if ( bard_options('header_image_label') === true ) : */}}
+
+<div class="entry-header" data-bg-type="{{/* wp2static unmapped: echo bard_options( 'header_image_bg_type' ); */}}" {{/* wp2static unmapped: echo $header_image_attr; */}} data-video-mp4="{{/* wp2static unmapped: echo bard_options( 'header_image_video_mp4' ); */}}" data-video-webm="{{/* wp2static unmapped: echo bard_options( 'header_image_video_webm' ); */}}">
+
+	<div class="cvr-container">
+		<div class="cvr-outer">
+			<div class="cvr-inner">
+
+			{{/* wp2static unmapped: if ( $header_logo !== 'no' ) : */}}
+
+			<div class="header-logo">
+
+				{{/* wp2static unmapped: if ( has_custom_logo() ) : */}}
+
+				<a href="{{ `/` | absURL }}" title="{{ .Site.Title }}" class="logo-img">
+					<img src="{{/* wp2static unmapped: echo esc_url( $custom_logo ); */}}" alt="{{ .Site.Title }}">
+				</a>
+				
+				{{/* wp2static dropped orphan: else */}}
+
+				<a href="{{ `/` | absURL }}">{{/* wp2static unmapped: echo bloginfo( 'title' ); */}}</a>
+
+				{{/* wp2static dropped orphan: end */}}
+				
+				<br>
+				<p class="site-description">{{ .Site.Params.description }}</p>
+				
+			</div>
+
+			{{/* wp2static unmapped: // Social Icons */}}
+			
+			{{/* wp2static dropped orphan: end */}}
+
+			</div>
+		</div>
+	</div>
+
+
+	{{/* wp2static unmapped: // Slider */}}
+	
+</div>
+
+{{/* wp2static dropped orphan: end */}}

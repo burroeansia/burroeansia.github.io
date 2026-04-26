@@ -1,0 +1,63 @@
+{{/* wp2static unmapped: if ( bard_options( 'main_nav_label' ) === true ) : */}}
+
+<div id="main-nav" class="clear-fix" data-fixed="{{/* wp2static unmapped: echo bard_options( 'main_nav_fixed' ); */}}">
+
+	<div {{/* wp2static unmapped: echo bard_options( 'general_header_width' ) === 'contained' ? 'class="boxed-wrapper"': ''; */}}>	
+		
+		<div class="main-nav-buttons">
+
+			<!-- Alt Sidebar Icon -->
+			{{/* wp2static unmapped: if ( bard_options( 'main_nav_show_sidebar' ) === true ) : */}}
+			<div class="main-nav-sidebar">
+				<span class="btn-tooltip">Alt Sidebar</span>
+				<div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			{{/* wp2static dropped orphan: end */}}
+
+			<!-- Random Post Button -->			
+			{{/* wp2static unmapped: if ( bard_options( 'main_nav_show_random_btn' ) === true ) : */}}
+				{{/* wp2static unmapped: bard_random_post_button(); */}}
+			{{/* wp2static dropped orphan: end */}}
+			
+		</div>
+
+		<!-- Social Trigger Icon -->
+		{{/* wp2static unmapped: if ( bard_options( 'main_nav_show_socials' ) === true ) : */}}
+		<div class="main-nav-socials-trigger">
+			<i class="fas fa-share-alt"></i>
+			<i class="fa fa-times"></i>
+		</div>
+		{{/* wp2static dropped orphan: end */}}
+
+		<!-- Icons -->
+		<div class="main-nav-icons">
+			{{/* wp2static unmapped: if ( bard_options( 'main_nav_show_socials' ) === true ) */}}
+
+			{{/* wp2static unmapped: if ( bard_options( 'main_nav_show_search' ) === true ) : */}}
+			<div class="main-nav-search">
+				<span class="btn-tooltip">Search</span>
+				<i class="fa fa-search"></i>
+				<i class="fa fa-times"></i>
+				{{ partial `searchform.html` . }}
+			</div>
+			{{/* wp2static dropped orphan: end */}}
+		</div>
+
+		{{/* wp2static unmapped: // Navigation Menus */}}
+
+		<!-- Mobile Menu Button -->
+		<span class="mobile-menu-btn">
+			<i class="fa fa-chevron-down"></i>
+		</span>
+
+	</div>
+
+	{{/* wp2static unmapped: $mobile_menu_location = 'main'; */}}
+	
+</div><!-- #main-nav -->
+
+{{/* wp2static dropped orphan: end */}}

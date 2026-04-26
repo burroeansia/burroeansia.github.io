@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Burro &amp; Ansia</title>
+    <link>http://localhost:9011/categories/</link>
+    <description>Recent content in Categories on Burro &amp; Ansia</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Feb 2021 18:11:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:9011/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Le Nostre Ricette</title>
+      <link>http://localhost:9011/categories/le-nostre-ricette/</link>
+      <pubDate>Sun, 14 Feb 2021 18:10:58 +0000</pubDate>
+      <guid>http://localhost:9011/categories/le-nostre-ricette/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Racconti</title>
+      <link>http://localhost:9011/categories/racconti/</link>
+      <pubDate>Sun, 14 Feb 2021 18:10:58 +0000</pubDate>
+      <guid>http://localhost:9011/categories/racconti/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ansia</title>
+      <link>http://localhost:9011/categories/ansia/</link>
+      <pubDate>Thu, 03 Dec 2020 00:01:25 +0000</pubDate>
+      <guid>http://localhost:9011/categories/ansia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Birra E Ansia</title>
+      <link>http://localhost:9011/categories/birra-e-ansia/</link>
+      <pubDate>Sat, 01 Feb 2020 09:00:06 +0000</pubDate>
+      <guid>http://localhost:9011/categories/birra-e-ansia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Eventi</title>
+      <link>http://localhost:9011/categories/eventi/</link>
+      <pubDate>Thu, 12 Dec 2019 00:03:00 +0000</pubDate>
+      <guid>http://localhost:9011/categories/eventi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Le Sfide</title>
+      <link>http://localhost:9011/categories/le-sfide/</link>
+      <pubDate>Thu, 05 Apr 2018 12:51:23 +0000</pubDate>
+      <guid>http://localhost:9011/categories/le-sfide/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,11 @@
+name = "Bard Pro"
+license = "GPLv3 or later"
+licenselink = ""
+description = "Clean and Minimalist WordPress theme."
+homepage = "https://wp-royal.com/themes/item-bard-pro/"
+tags = ["blog", "e-commerce", "one-column", "two-columns", "three-columns", "left-sidebar", "right-sidebar", "custom-background", "custom-colors", "custom-header", "custom-menu", "custom-logo", "featured-images", "footer-widgets", "rtl-language-support", "sticky-post", "theme-options", "threaded-comments", "translation-ready"]
+features = []
+min_version = "0.80.0"
+[author]
+  name = "Royal Flush"
+  homepage = "http://wp-royal.com/"

@@ -1,0 +1,75 @@
+/* Customization */
+#fs_connect {
+	width: 560px;
+}
+
+#fs_connect .fs-visual,
+#fs_connect .fs-permissions,
+#fs_connect .fs-terms {
+	display: none;
+}
+
+#fs_connect .fs-content p {
+	margin-bottom: 20px;
+}
+
+#fs_connect .fs-content p:first-child span {
+	font-size: 14px;
+}
+
+#fs_connect .fs-actions {
+	padding: 0;
+}
+
+#fs_connect .fs-license-key-container {
+	width: 100%;
+}
+
+#fs_license_key {
+    float: left;
+    width: 70% !important;
+}
+
+#fs_connect .fs-license-key-container .dashicons {
+    right: 31%;
+}
+
+#fs_connect .show-license-resend-modal {
+ 	display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 26px;
+    height: 28px;
+    margin: 0;
+    padding: 0 10px 1px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+ 	color: #555;
+    border-color: #ccc;
+    background: #f7f7f7;
+    box-shadow: 0 1px 0 #ccc;
+    vertical-align: top;
+    margin-left: 10px;
+ }
+
+ .wproyal-get-license-video {
+  display: block;
+  clear: both;
+  margin-top: 20px;
+}
+
+.wproyal-get-license-video em {
+  display: inline-block;
+  margin-top: 7px;
+  opacity: 0.8;
+  font-size: 13px !important;
+}
+
+.fs-modal .fs-modal-dialog {
+  width: 665px;
+}

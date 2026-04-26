@@ -1,0 +1,28 @@
+{{/* wp2static unmapped: // prevent the direct loading of this file */}}
+
+	<h3 class="comment-title">
+		{{/* wp2static unmapped: comments_number( esc_html__( 'No Comments', 'bard-pro' ), esc_html__( 'One Comment', 'bard-pro' ), esc_html__( '% Comments', 'bard-pro' ) ); */}}
+	</h3>
+	
+	<ul class="commentslist" >
+		{{/* wp2static unmapped: wp_list_comments( 'callback=bard_comments' ); */}}
+	</ul>
+
+	{{/* wp2static unmapped: if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : */}}
+	<div class="comments-nav-section">					
+		<p class="fl"></p>
+		<p class="fr"></p>
+
+		<div>				
+			<div class="default-previous">
+			{{/* wp2static unmapped: previous_comments_link( '<i class="fa fa-long-arrow-alt-left" ></i>&nbsp;'. esc_html__( 'Older Comments', 'bard-pro' ) ); */}}
+			</div>
+
+			<div class="default-next">
+				{{/* wp2static unmapped: next_comments_link( esc_html__( 'Newer Comments', 'bard-pro' ) .'&nbsp;<i class="fa fa-long-arrow-alt-right" ></i>' ); */}}
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	</div>
+{{/* wp2static unmapped: endif; */}}

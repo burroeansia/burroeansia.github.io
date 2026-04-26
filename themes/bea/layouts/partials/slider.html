@@ -1,0 +1,35 @@
+{{ $featured := where .Site.RegularPages "Params.featured" true }}
+{{ if $featured }}
+<div class="featured-slider-area boxed-wrapper">
+    <div id="featured-slider" class="boxed-wrapper">
+        {{ range first 6 $featured }}
+        <div class="slider-item">
+            {{ with .Params.image }}
+                <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+            {{ end }}
+            <div class="cv-container image-overlay">
+                <div class="cv-outer">
+                    <div class="cv-inner">
+                        <div class="slider-info">
+                            {{ with .Params.categories }}
+                                <div class="slider-categories">
+                                    {{ range $i, $cat := . }}
+                                        {{ if $i }}, {{ end }}<a href="{{ (printf "categories/%s" (urlize $cat)) | relURL }}">{{ $cat }}</a>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                            <h2 class="slider-title">
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            </h2>
+                            <div class="slider-read-more">
+                                <a href="{{ .Permalink }}">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

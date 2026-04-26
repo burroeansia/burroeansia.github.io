@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "it-IT" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ if .Site.Params.tagline }} ~ {{ .Site.Params.tagline }}{{ end }}{{ else }}{{ .Title }} &bull; {{ .Site.Title }}{{ end }}{{ end }}</title>
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unna:400,400i,700|Lato:300,400,400i,700|Bitter:400,400i,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{ with .OutputFormats.Get "RSS" -}}
+        <link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}">
+    {{ end -}}
+    {{ block "head" . }}{{ end }}
+</head>
+<body class="{{ if .IsHome }}home{{ end }}">
+
+<div id="page-wrap">
+
+    {{ partial "top-bar.html" . }}
+    {{ partial "main-nav.html" . }}
+    {{ partial "header.html" . }}
+
+    <div class="page-content">
+        {{ block "main" . }}{{ end }}
+    </div>
+
+    {{ partial "footer.html" . }}
+
+</div>
+
+<script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>

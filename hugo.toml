@@ -1,0 +1,47 @@
+baseURL = "/"
+languageCode = "it-IT"
+defaultContentLanguage = "it"
+title = "Burro & Ansia"
+theme = ["bea", "bard-pro-premium", "wp2static-defaults"]
+paginate = 8
+enableEmoji = true
+
+[markup.goldmark.renderer]                                                
+  unsafe = true
+[params]
+    tagline = "Millennials Food enthusiasts"
+    description = "Millennials Food enthusiasts — ricette, racconti e ansia a pranzo e cena."
+    author = "burroeansia"
+    instagramHandle = "butterandanxiety"
+    copyright = "All rights reserved."
+
+    [[params.social]]
+        name = "Facebook"
+        url  = "https://www.facebook.com/butterandanxiety/"
+    [[params.social]]
+        name = "Instagram"
+        url  = "https://www.instagram.com/butterandanxiety/"
+
+[menu]
+    [[menu.main]]
+        name = "Home"
+        url  = "/"
+        weight = 1
+    [[menu.main]]
+        name = "Bologna Food"
+        url  = "/bologna-food/"
+        weight = 2
+    [[menu.main]]
+        name = "Chi Siamo"
+        url  = "/about/"
+        weight = 3
+    [[menu.main]]
+        name = "Contattaci"
+        url  = "/contact/"
+        weight = 4
+
+[taxonomies]
+    category = "category"
+    tag      = "tag"
+
+
